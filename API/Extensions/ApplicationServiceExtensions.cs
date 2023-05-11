@@ -20,6 +20,7 @@ namespace API.Extensions
             {
                 options.UseSqlite(config.GetConnectionString("DefaultConnection"));
             });
+            services.AddScoped<LogUserActivity>();
 
             return services;
         }
